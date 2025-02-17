@@ -1,8 +1,8 @@
-
+'''
 #esercizio_2-3
 print("\n esercizio_2-3\n")
 x = input("whrite your name  ")
-print(f"Hello {x}, would you like to learn some Python today?")
+print(f"Hello {x}, would you like to learn some Python today?\n")
 
 name: str = "Flavio"
 print(f"Ciao {name}, come stai?")
@@ -12,7 +12,7 @@ print(f"Ciao {name}, come stai?")
 #esercizio_2-4
 print("\n esercizio_2-4\n")
 name: str = "Marco"
-print(f"lower: {name.lower()}, title: {name.title()}, upper: {name.upper()}")
+print(f"lower: {name.lower()}, \n title: {name.title()}, \n upper: {name.upper()}")
 
 
 
@@ -53,7 +53,7 @@ mylist3: str = ["Mersedes", "BMW", "Tesla"]
 for i in mylist3:
     print(f"I would like to own a {i} car")
 
-
+'''
 
 #esercizio_3-4
 print("\n esercizio_3-4\n")
@@ -78,6 +78,10 @@ for i in guest_list:
 print("\n esercizio_3-6\n")
 print("I found a bigger table, so we have more avaible space")
 guest_list.extend(["Anna", "Marco", "Stefano"])
+
+print(*guest_list)
+print(guest_list[3])
+
 for i in guest_list:
     print(f"Dear {i} would you like to come to diner?")
 
@@ -85,14 +89,17 @@ for i in guest_list:
 
 #esercizio_3-7
 print("\n esercizio_ 3-7\n")
-print(*guest_list, sep= ", ")
-print("I am so sorry, we have space only for 2 people")
+#print(*guest_list, sep= ", ")
+
+print("I am so sorry, we have space only for 2 people\n")
+
 for i in guest_list[2:]:
-    print(f"Dear {i} we are so sorry, we can't invite you to diner")
+    print(f"Dear {i} we are so sorry, we can't invite you to diner\n")
     guest_list.pop()
-print(*guest_list, sep= ", ")
+print(*guest_list, sep= ",\n")
+
 for i in guest_list:
-    print(f"Dear {i} would you like to come to diner?")
+    print(f"\nDear {i} would you like to come to diner?\n")
 
 del guest_list
 #print(guest_list)
