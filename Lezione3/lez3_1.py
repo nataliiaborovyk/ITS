@@ -25,7 +25,7 @@ for i in range(posti_tot):
         scelta == "esci"
         break
 
-        '''
+        
 
 #esercizio_2
 
@@ -51,8 +51,24 @@ else:
 print(f"Il tempo assegnato alla direzione Nord-Sud è {time_ns:.1f}")
 print(f"Il tempo assegnato alla direzione Est-Ovest è {time_eo:.1f}")
 
-
+'''
 #esercizio3
 
 print("\n esercizio 3 \n")
 
+ingredients = ["pomodoro", "mozzarella"]
+# match statement
+
+match ingredients:
+   
+     case ["pomodoro", "mozzarella", *_]:
+        print("Puoi fare la Pasta al Pomodoro!")
+
+     case ["pomodoro", "mozzarella", "basilico"]:
+        print("Puoi fare una Caprese!")
+
+     case ["pane", "prosciutto", "formaggio"]:
+        print("Puoi fare un Panino!")
+
+     case _:
+        print("Non saprei cosa consigliare…sperimenta!")
