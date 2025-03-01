@@ -16,8 +16,8 @@ gen:str = input(f"Inserisci il suo genere (ez. \"m\" o \"f\"): \n")
 
 match (nome, gen):
     case (x, "m"):
-        print(f"{x}: gerene \"Maschio\"\n")
+        print(f"Nome: {x}, gerene: \"Maschio\"\n")
     case (y, "f"):
-        print(f"{y}: genere \"Femmina\"\n")
+        print(f"Nome: {y}: genere \"Femmina\"\n")
     case _:
         print(f"\"Errore\" non è possibile generare un documento di identita\n")

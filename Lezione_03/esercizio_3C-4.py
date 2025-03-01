@@ -16,17 +16,19 @@ print("\n Esercizio 3C-4\n")
 
 nome:str = input("Digita il nome di un animale: ")
 
-lista_mammiferi:list[str] = ["cane", "gatto", "cavallo", "elefante", "leone"]
-lista_rettili:list[str] = ["serpente", "lucertola", "tartaruga", "coccodrillo"]
-lista_uccelli:list[str] = ["aquila", "pappagallo", "gufo", "falco"]
-lista_pesci:list[str] = ["squallo", "trota", "salmone", "carpa"]
+mammiferi:list[str] = ["cane", "gatto", "cavallo", "elefante", "leone"]
+rettili:list[str] = ["serpente", "lucertola", "tartaruga", "coccodrillo"]
+uccelli:list[str] = ["aquila", "pappagallo", "gufo", "falco"]
+pesci:list[str] = ["squallo", "trota", "salmone", "carpa"]
 
 match nome:
-    case nome if nome in lista_mammiferi:
+    case nome if nome in mammiferi:
         print(f"{nome} appartiene alla categoria dei Mammiferi")
-    case nome if nome in lista_rettili:
+    case nome if nome in rettili:
         print(f"{nome} appartiene alla categoria dei Rettili")
-    case nome if nome in lista_uccelli:
+    case nome if nome in uccelli:
         print(f"{nome} appartiene alla categoria dei Uccelli")
-    case nome if nome in lista_pesci:
+    case nome if nome in pesci:
         print(f"{nome} appartiene alla categoria dei Pescic")
+    case _:
+        print("Il programma non è in grado di classificare l'animale inserito")

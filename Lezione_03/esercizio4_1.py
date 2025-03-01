@@ -15,13 +15,22 @@ print("\n Esercizio 4-1 \n")
 pizza_n: list = ["Margherita", "Marinara", "Napoletana"]
 
 for i in pizza_n:
-    print(i)
+    if i == "Margherita":
+        print(f"\n{i} pizza is made with tomato sauce or marinara as the base sauce on the crust.\nI like {i} pizza\n")
+    elif i == "Napoletana":
+        print(f"{i} pizza is made with mozzarella slices topped off with olives\nI like {i} pizza\n")
+    elif i == "Marinara":
+        print(f"{i} pizza is made with tomato sauce, extra virgin olive oil, oregano, and garlic\nI like {i} pizza\n")
 
-for i in pizza_n:
-    print(f"I like {i} pizza")
 
-print("Margherita Pizza is made with tomato sauce or marinara as the base sauce on the crust. \n\
-Marinara Pizza is made with tomato sauce, extra virgin olive oil, oregano, and garlic. \n\
-Napoletana pizza is made with mozzarella slices topped off with olives\
-anchovies \nand a scatter of capers and basil leaves.\n \
-I really love pizza!\n")
+#versione con while
+i: int = 0
+while i < 3:
+    if pizza_n[i] == "Margherita":
+        print(f"\n{pizza_n[i]} pizza is made with tomato sauce or marinara as the base sauce on the crust.\nI like {pizza_n[i]} pizza\n")
+    elif pizza_n[i]  == "Napoletana":
+        print(f"{pizza_n[i]} pizza is made with mozzarella slices topped off with olives\nI like {pizza_n[i]} pizza\n")
+    elif pizza_n[i]  == "Marinara":
+        print(f"{pizza_n[i]} pizza is made with tomato sauce, extra virgin olive oil, oregano, and garlic\nI like {pizza_n[i]} pizza\n")
+    i += 1
+    

@@ -14,16 +14,18 @@ stampare la valutazione corrispondente:
 #Esercizio 3C-1
 print("\nEsercizio 3C-1\n")
 
-voto = int(input("Inserisci il voto numerico intero da 1 a 10: \n"))
+voto: int = int(input("Inserisci il voto numerico intero da 1 a 10: \n"))
 
 match voto:
-    case 8|9:
+    case 10:
         print("Eccellente\n")
-    case 6|7:
+    case 8|9:
         print("Molto buono\n")
-    case 4|5:
+    case 6|7:
         print("Sufficiente\n")
+    case 4|5:
+        print("Insufficiente\n")
     case 1|2|3:
         print("Gravemente insufficiente\n")
     case _:
-        print("Voto no valido\n")
+        print("Voto non valido\n")

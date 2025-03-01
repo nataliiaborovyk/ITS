@@ -27,7 +27,7 @@ print("\n Esercizio 3C-6\n")
 # input dei dati
 
 nome:str = input("\nDigita il nome di un animale: ").lower()
-habitat_1:str = input("\nDigita l'habitat in cui vive l'animale: ")
+habitat:str = input("\nDigita l'habitat in cui vive l'animale: ").lower()
 #habitat_2:str = input("\nDigita un altro l'habitat in cui vive l'animale (se non esiste digita solo \"Enter\"):  ").title()
 
 lista_mammiferi:list[str] = ["cane", "gatto", "cavallo", "elefante", "leone"]
@@ -43,60 +43,77 @@ animal_type:str = ""
 match nome:
     case nome if nome in lista_mammiferi:
         animal_type = "Mammiferi"
-        print(f"\n{nome.title()} appartiene alla categoria dei {animal_type}")
+        print(f"\n{nome.title()} appartiene alla categoria dei {animal_type}\n")
         
     case nome if nome in lista_rettili:
         animal_type = "Rettili"
-        print(f"\n{nome.title()} appartiene alla categoria dei {animal_type}")
+        print(f"\n{nome.title()} appartiene alla categoria dei {animal_type}\n")
         
     case nome if nome in lista_uccelli:
         animal_type = "Uccelli"
-        print(f"\n{nome.title()} appartiene alla categoria dei {animal_type}")
+        print(f"\n{nome.title()} appartiene alla categoria dei {animal_type}\n")
        
     case nome if nome in lista_pesci:
         animal_type = "Pesci"
-        print(f"\n{nome.title()} appartiene alla categoria dei {animal_type}")
+        print(f"\n{nome.title()} appartiene alla categoria dei {animal_type}\n")
     case _:
         animal_type = "Unknown"
-        print(f"\nCategoria {animal_type}")
+        print(f"\nCategoria sconosciuta: {animal_type}\n")
 
 # inserisco i dati nel dizionario
-
 diz:dict = {}
 diz["Nome"] = nome
 diz["Categoria"] = animal_type
-diz["Habitat_1"] = habitat_1
-#diz["Habitat_2"] = habitat_2
+diz["Habitat"] = habitat
 
-for k, v in diz.items():
-    print(f"\n{k}: {v}")
+#stampo il dizionario
+for k, v in diz.items():     
+    print(f"{k}: {v}")
 
-# verifico in quali habitat puo vivere l'animale
-
+# Liste dei habitat in quali possono vivere l'animali
 acqua:list = ["serpente", "tartaruga", "coccodrillo", "anatra", "cigno", "squallo", "trota", "salmone", "carpa"]
 aria:list = ["aquila", "pappagallo", "gufo", "falco", "cigno", "anatra"]
 terra:list = ["cane", "gatto", "cavallo", "elefante", "leone", "serpente", "lucertola", "tartaruga", "coccodrillo", "gallina", "tacchino"]
 
+#verifico in quali altri habitat puo vivere animale da input
 
 match diz:
-    case diz if {"Nome": nome, "Categoria": animal_type, "Habitat_1":"acqua"} and nome in terra:
-        print(f"\nAnimale {nome} vive nell'acqua e sulla terra")
-    case diz if {"Nome": nome, "Categoria": animal_type, "Habitat_1":"acqua"} and nome in aria:
-        print(f"\nAnimale {nome} vive nell'acqua e nell'aria")
-    case diz if {"Nome": nome, "Categoria": animal_type, "Habitat_1":"acqua"}:
-        print(f"\nAnimale {nome} vive solo nell'acqua")
-    case diz if {"Nome": nome, "Categoria": animal_type, "Habitat_1":"terra"} and nome in aria:
-        print(f"\nAnimale {nome} vive nell'aria e sulla terra")
-    case diz if {"Nome": nome, "Categoria": animal_type, "Habitat_1":"terra"}:
-        print(f"\nAnimale {nome} vive solo sulla terra")
-    case diz if {"Nome": nome, "Categoria": animal_type, "Habitat_1":"aria"}:
-        print(f"\nAnimale {nome} vive nell'aria")
-    case _:
-        print(f"\nNon sono in grado di fornire informazioni sull'habitat {habitat_1} ")
 
+    case diz if diz["Categoria"] == "Unknown":
+        print(f"\nNon so dire in quale categoria classificare l'animale {nome}! ")
+        print(f"Non sono in grado di fornire informazioni sull'habitat {habitat}")
 
+    case diz if diz["Habitat"] == "acqua":
+        if nome in acqua:
+            print(f"\nAnimale {nome} vive solo nell'acqua") 
+        elif nome in aria:
+            print(f"\nAnimale {nome} vive nell'acqua e nell'aria")
+        elif nome in terra:
+            print(f"\nAnimale {nome} vive nell'acqua e sulla terra")
 
+    case diz if diz["Habitat"] == "aria":
+        if nome in aria:
+            print(f"\nAnimale {nome} vive nell'aria") 
+        elif nome in acqua:
+            print(f"\nAnimale {nome} vive nell'aria e nell'acqua")
+        elif nome in terra:
+            print(f"\nAnimale {nome} vive nell'aria e sulla terra")   
+
+    case diz if diz["Habitat"] == "terra":
+        if nome in terra:
+            print(f"\nAnimale {nome} vive solo sulla terra") 
+        elif nome in aria:
+            print(f"\nAnimale {nome} vive sulla terra e nell'aria")
+        elif nome in acqua:
+            print(f"\nAnimale {nome} vive sulla terra e nell'aria")
+    
+   
+    
+  
 '''
+# versione 2
+print("\n\tVersione 2 senza usare i dizionari")
+
 match nome:
     case nome if nome in aria and nome in acqua and nome in terra:
         print(f"Animale {nome} vive in aria, acqua e terra")
@@ -112,6 +129,10 @@ match nome:
         print(f"Animale {nome} vive solo nell'aria")
     case nome if nome in terra:
         print(f"Animale {nome} vive solo sulla terra")
+    case _:
+        print(f"\nNon so dire in quale categoria classificare l'animale {nome}! ")
+        print(f"Non sono in grado di fornire informazioni sull'habitat {habitat}")
+    
 '''
  
 

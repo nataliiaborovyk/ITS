@@ -9,7 +9,14 @@ print("\n Esercizio 4-4 \n")
 
 list_num: list = []
 
+print("\nversione con ciclo for\n")
 for i in range(1,1000001):
     list_num.append(i)
+print(list_num)
 
+print("\nVersione con while\n")
+i:int = 1
+while i <= 1000000:
+    list_num.append(i)
+    i += 1
 print(list_num)

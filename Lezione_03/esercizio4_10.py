@@ -19,6 +19,6 @@ for i in lista[:3]:
 meta:int = len(lista)//2 
 lista_metà:list = lista[meta-1:meta+2]
 
-print("\nGli elementi in mezzo sono: ", *lista_metà, sep=", ")
+print("\nGli elementi in mezzo sono: ", *lista_metà)
 
 print("\nGli ultimi 3 elementi sono: ", *lista[-3:])

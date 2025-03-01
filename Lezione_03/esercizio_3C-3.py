@@ -16,24 +16,20 @@ print("\n Esercizio 3C-3\n")
 oggetti:list = []
 
 for i in range(3):
-    x:str = input("Inserisci oggetto: ")
-    oggetti.append(x)
+    oggetti.append(input("Inserisci oggetto: "))
+    #x:str = input("Inserisci oggetto: ")
+    #oggetti.append(x)
 
 print(f"\n La lista contiene: {oggetti}")
 
 match oggetti:
-
     case ["penna", "matita", "quaderno"]:
         print("\n Materiale scolastico \n")
-
     case ["pane", "latte", "uova"]:
         print("\n Prodotti alimentari \n ")
-
     case ["sedia", "tavolo", "armadio"]:
         print("\n Mobili \n")
-
     case ["telefono","computer", "tablet"]:
         print("\n Dispositivi elettronici \n")
-
     case _:
         print("\n Categoria sconosciuta \n")

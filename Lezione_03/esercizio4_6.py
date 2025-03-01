@@ -7,8 +7,13 @@ of the odd numbers from 1 to 20. Use a for loop to print each number.
 print("\n Esercizio 4-6 \n")
 
 list_disp: list = []
-
 for i in range(1,21,2):
     list_disp.append(i)
-
 print(*list_disp)
+
+
+list_disp: list = []
+i = 1
+while i <= 20:
+    print(i)
+    i+=2
