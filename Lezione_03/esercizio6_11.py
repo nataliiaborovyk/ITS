@@ -32,3 +32,17 @@ for i in city_dict:
     print(f"\n  City {i}")
     for k, v in city_dict[i].items():
         print(f"{k.capitalize()}: {v}")
+
+
+# versione 2
+print("\nversione2\n")
+
+for i, k in city_dict.items():
+    country = k["country"].title()
+    population =  k["popolation"]
+    monuments = k["monuments"].title()
+
+    print(f"\n{i.title()} is in {country}.")
+    print(f"  It has a population of about {population}.")
+    print(f"  The monumet famouse is {monuments}.")
+

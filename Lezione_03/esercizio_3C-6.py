@@ -108,7 +108,48 @@ match diz:
             print(f"\nAnimale {nome} vive sulla terra e nell'aria")
     
    
+
+match diz:
+
+    case diz if diz["Categoria"] == "Unknown":
+        print(f"\nNon so dire in quale categoria classificare l'animale {nome}! ")
+        print(f"Non sono in grado di fornire informazioni sull'habitat {habitat}")
+
+    case diz if diz["Habitat"] == "acqua":
+        match nome:
+            case nome if nome in acqua:
+                print(f"\nAnimale {nome} vive solo nell'acqua") 
+            case nome if nome in aria:
+                print(f"\nAnimale {nome} vive nell'acqua e nell'aria")
+            case nome if nome in terra:
+                print(f"\nAnimale {nome} vive nell'acqua e sulla terra")
+
+    case diz if diz["Habitat"] == "aria":
+        match nome:
+            case nome if nome in aria:
+                print(f"\nAnimale {nome} vive nell'aria") 
+            case nome if nome in acqua:
+                print(f"\nAnimale {nome} vive nell'aria e nell'acqua")
+            case nome if nome in terra:
+                print(f"\nAnimale {nome} vive nell'aria e sulla terra")   
+
+    case diz if diz["Habitat"] == "terra":
+        match nome:
+            case nome if nome in terra:
+                print(f"\nAnimale {nome} vive solo sulla terra") 
+            case nome if nome in aria:
+                print(f"\nAnimale {nome} vive sulla terra e nell'aria")
+            case nome if nome in acqua:
+                print(f"\nAnimale {nome} vive sulla terra e nell'aria")
     
+
+
+
+
+
+
+
+
   
 '''
 # versione 2
