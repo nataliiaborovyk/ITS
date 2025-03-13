@@ -41,4 +41,5 @@ def build_profile(first_name:str, last_name:str, **kwargs):
         
     return output
 
+
 print(build_profile("Eric", "Crow", age=45, hair="brown", weight=72))
