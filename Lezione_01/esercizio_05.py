@@ -14,17 +14,15 @@ if n < 2:
 else:
     div: int = 2
     while True:
-        if div <= n ** (1/2):
+        if div <= (n ** (1/2)):
             if n % div == 0:
                 
-                is_prime = True
+                is_prime = False
                 break
-            
-            else:
-                div += 1
-        else: 
-            is_prime = False
-            break
+            div += 1
+        #else: 
+         #   is_prime = False
+          #  break
 if is_prime == True:
     print(f"Il numero {n} è primo")
 else:

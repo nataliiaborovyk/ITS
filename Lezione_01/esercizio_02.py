@@ -30,6 +30,8 @@ for i in range(4):
         max = n
 print(f"\nIl numero max: {max}\n")
 
+#versione 3
+
 max: int = 0 
 i = 1
 while i <= 4:
@@ -40,6 +42,8 @@ while i <= 4:
         max = n
     i += 1
 print(f"\nIl numero max: {max}\n")
+
+#versione 4
 
 max: int = 0 
 i = 0
