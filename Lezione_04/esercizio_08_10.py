@@ -15,12 +15,14 @@ def show_messages(*args):
 lista_saluti: list = ["ciao", "hello", "privet", "nihao"]
 show_messages("La lista dei mesaggi: ", *lista_saluti)
 
+
 def send_messages(lista1: list[str], lista2:list[str]):
     for i in lista1:
         lista2.append(i)
     lista1.clear()
     print("\nLa lista dei mesaggi: ", *lista1)
     print("\nLa lista dei mesaggi inviati: ", *lista2)
+
 
 mesaggi_inviati:list = []
 send_messages(lista_saluti, mesaggi_inviati)
