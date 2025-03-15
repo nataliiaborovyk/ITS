@@ -68,9 +68,10 @@ class Menu:
             media = sum / len(self.lista_food)
         return media
         
-        
+
         # 4. Create a addFood() and removeFood() for the Menu
         # 5. Create a few new Food instances. Add each to the Menu using the respective Method.
+
 pane = Food("Pane", 2, "Mangiamo sempre volentieri")
 mela = Food("Mela", 1, "frutta fa bene alla salute")
 
