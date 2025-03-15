@@ -81,10 +81,10 @@ product.addFood(mela)
 product.removeFood(pizza)
 
 
-# 6. Add a method printPrices() that list all items on the Menu with their prices.
+        # 6. Add a method printPrices() that list all items on the Menu with their prices.
 print("")
 product.printPrices()
 
-# 7. Add a Menu method getAveragePrice() that returns the average Food price of the Menu
+        # 7. Add a Menu method getAveragePrice() that returns the average Food price of the Menu
 media = product.getAveragePrice()
 print(f"La media dei prezzi: {media}")
