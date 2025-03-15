@@ -15,7 +15,7 @@ import Tools.functions_2 as utl    # perche stampa la stringa che sta fuori dall
 utl.check_value(10)
 
 
-# VERSIONE 2
+# VERSIONE 2      
 print("\nVersione 2")
 
 from Tools.functions_2 import check_value

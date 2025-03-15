@@ -10,7 +10,9 @@ printing methods respectively too.
 '''
 print("\n   Esercizio 2 da slide")
 
+        # 1. Write a class called Student with the attributes name (str) and studyProgram (str)
 class Student:
+
     def __init__(self, name:str, studyProgram:str, age:int, gender:str):
         self.name = name
         self.studyProgram = studyProgram
@@ -20,10 +22,13 @@ class Student:
     def print_info(self):
         print(f"{self.name} - study program: {self.studyProgram}, age: {self.age}, gender: {self.gender}") 
 
+        # 2. Create three instances. One for yourself, one for your left neighbour and one for our right neighbour.
 nat = Student("Nataliia", "Data Analyst", 40, "femmina")
 lor = Student("Lorenzo","Claud developer", 27, "maschio")        
 ele = Student("Eleonora", "Data analyst", 46, "femmina")
 
+        # 3. Add a method printInfo that prints the name and studyProgram of a Student. 
+        # Test your method on the objects!
 nat.print_info()
 lor.print_info()
 ele.print_info()

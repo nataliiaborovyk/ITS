@@ -15,9 +15,11 @@ price of the Menu
 '''
 print("\n   Esercizio 4 dalle slide")
 
-# 1. Write a new class called Food, it should have name, price and description as attributes.
+        # 1. Write a new class called Food, it should have name, price and description as attributes.
+
 class Food:
-    def __init__(self, name, price, description):
+
+    def __init__(self, name:str, price:float, description:str):
         self.name = name
         self.price = price
         self.description = description
@@ -26,7 +28,7 @@ class Food:
         print(f"{self.name} is {self.description} and cost {self.price}$")
         
 
-# 2. Instantiate at least three different foods you know and like.
+        # 2. Instantiate at least three different foods you know and like.
 caffe = Food("Caffè", 10, "nice drink in the morning")
 pizza = Food("Pizza", 5, "better then sandwich")
 cake = Food("Cake", 7, "good desert")
@@ -37,8 +39,8 @@ cake.printInfo()
 
 lista_food:list = [caffe, pizza, cake]
 
-# 3. Create a new class called Menu, it should have a list (of Foods) as attribute. 
-# __init__ should take a list of Foods as optional parameters (default=[])
+        # 3. Create a new class called Menu, it should have a list (of Foods) as attribute. 
+        # __init__ should take a list of Foods as optional parameters (default=[])
 
 class Menu:
 
@@ -66,8 +68,9 @@ class Menu:
             media = sum / len(self.lista_food)
         return media
         
-# 4. Create a addFood() and removeFood() for the Menu
-# 5. Create a few new Food instances. Add each to the Menu using the respective Method.
+        
+        # 4. Create a addFood() and removeFood() for the Menu
+        # 5. Create a few new Food instances. Add each to the Menu using the respective Method.
 pane = Food("Pane", 2, "Mangiamo sempre volentieri")
 mela = Food("Mela", 1, "frutta fa bene alla salute")
 
