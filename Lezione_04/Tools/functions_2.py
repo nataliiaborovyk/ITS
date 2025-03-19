@@ -1,6 +1,6 @@
 #function that takes a number as an argument
 
-print("perche stampa anche questa stringa che sta fuori dalla funzione?")
+#print("perche stampa anche questa stringa che sta fuori dalla funzione?")
 
 def check_value(n):
 

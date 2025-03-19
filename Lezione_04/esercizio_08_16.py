@@ -19,7 +19,7 @@ print("\n Versione 1")
 
 from Tools import functions_1
 
-functions_1.print_numbers([3, 3])    #perche stampa anche print che stanno fuori funzioni???
+functions_1.print_numbers([3, 3])    #perche stampa anche print che stanno fuori dalle funzioni???
 functions_1.saluto()
 
 
