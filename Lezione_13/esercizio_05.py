@@ -8,7 +8,7 @@ calcoli la relativa progressione armonica, arrotondando il risultato finale a 6 
 '''
 
 
-def armonica(n):
+def armonica(n:int) -> float:
     if n <= 0:
         print("error!")
     elif n == 1:
