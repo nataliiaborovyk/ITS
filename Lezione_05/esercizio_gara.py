@@ -1,4 +1,37 @@
+'''
+Raffinamento dei requisiti
+1. Movimenti Tartaruga
+1.1. Passo veloce (50% di probabilità): avanza di 3 quadrati. 1 ≤ i ≤ 5
+1.2. Scivolata (20% di probabilità): arretra di 6 quadrati. Non può andare sotto il quadrato 1. 6 ≤ i ≤ 7
+1.3. Passo lento (30% di probabilità): avanza di 1 quadrato. 8 ≤ i ≤ 10
 
+2. Movimenti Lepre
+2.1. Riposo (20% di probabilità): non si muove.  1 ≤ i ≤ 2
+2.2. Grande balzo (20% di probabilità): avanza di 9 quadrati. 3 ≤ i ≤ 4
+2.3. Grande scivolata (10% di probabilità): arretra di 12 quadrati. Non può andare sotto il quadrato 1.  i = 5
+2.4. Piccolo balzo (30% di probabilità): avanza di 1 quadrato. 6 ≤ i ≤ 8
+2.5. Piccola scivolata (20% di probabilità): arretra di 2 quadrati. Non può andare sotto il quadrato 1. 9 ≤ i ≤ 10
+
+
+3. Regole di gara
+  3.1. Inizio gara – stampare 'BANG !!!!! AND THEY'RE OFF !!!!!'
+  3.2. Percorso lungo 70 quadratini (rappresentato come una lista)
+  3.3. Partenza animali dal 1 quadratino
+  3.4. Finish al 70-esimo quadratino
+  3.5. Se animale scivola sotto 1 quadratino, va riportato al 1 quadratino
+  3.6. Usare  delle variabili per tenere traccia delle posizioni degli animali
+  3.7. Dopo ogni secondo del orologio (“tick”) stampare la posizione dei animali 
+       3.7.1. Posizione tartaruga - “T”
+       3.7.2. Posizione lepre - “H”
+       3.7.3. Posizione libera - “_”
+  3.8. Dopo la stampa di ogni “tick”, verificate se gli animali hanno raggiunto o superato il quadrato 70.
+       3.8.1. Se si, stampare il nome del vincitore e terminare la simulazione
+              3.8.1.1. Se vince tartaruga - "TORTOISE WINS! || VAY!!!"
+              3.8.1.2. Se vince lepre - "HARE WINS || YUCH!!!"
+              3.8.1.3. Se arrivano insieme - IT'S A TIE."
+       3.8.2. Se no, simulare il succesivo “tick” del orologio
+
+'''
 import random
 
 print("Band!!! And They're off!!!!")
