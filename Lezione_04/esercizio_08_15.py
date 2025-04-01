@@ -10,8 +10,7 @@ print("\n   Esercizio 8-15")
 # VERSIONE 1
 print("\nVersione 1")
 
-import Tools.functions_2 as utl    # perche stampa la stringa che sta fuori dalla funzione???
-
+import Tools.functions_2 as utl    
 utl.check_value(10)
 
 
