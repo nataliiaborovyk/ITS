@@ -14,7 +14,7 @@ Raffinamento dei requisiti
 
 
 3. Regole di gara
-  3.1. Inizio gara – stampare 'BANG !!!!! AND THEY'RE OFF !!!!!'
+  3.1. Inizio gara - stampare 'BANG !!!!! AND THEY'RE OFF !!!!!'
   3.2. Percorso lungo 70 quadratini (rappresentato come una lista)
   3.3. Partenza animali dal 1 quadratino
   3.4. Finish al 70-esimo quadratino
@@ -24,6 +24,7 @@ Raffinamento dei requisiti
        3.7.1. Posizione tartaruga - “T”
        3.7.2. Posizione lepre - “H”
        3.7.3. Posizione libera - “_”
+       3.7.4. Se posizione tartaruga == posizione lepre - stampare 'OUCH!!!'
   3.8. Dopo la stampa di ogni “tick”, verificate se gli animali hanno raggiunto o superato il quadrato 70.
        3.8.1. Se si, stampare il nome del vincitore e terminare la simulazione
               3.8.1.1. Se vince tartaruga - "TORTOISE WINS! || VAY!!!"
@@ -32,6 +33,9 @@ Raffinamento dei requisiti
        3.8.2. Se no, simulare il succesivo “tick” del orologio
 
 '''
+
+
+
 import random
 
 print("Band!!! And They're off!!!!")
@@ -51,8 +55,11 @@ def tartaruga(posizione_t:int = 1):
     elif 8 <= i_t <= 10:      #Passo lento
         posizione_t += 1
 
-    if posizione_t < 1:
-        posizione_t = 1
+    if posizione_t <= 0:
+        posizione_t = 0
+
+    elif posizione_t > 70:
+        posizione_t = 70
         
     return posizione_t
     
@@ -67,7 +74,7 @@ def lepre(posizione_l:int = 1):
         posizione_l += 0 
 
     elif 3 <= i_h <= 4:  #grande balzo 20%
-        posizione_l -= 9
+        posizione_l += 9
 
     elif 5 == i_h:
         posizione_l -= 12   #grande scivolata 10%
@@ -76,10 +83,13 @@ def lepre(posizione_l:int = 1):
         posizione_l += 1
 
     elif 9 <= i_h <= 10:   #piccolo scivolata 20%
-        posizione_l += 2
+        posizione_l -= 2
 
-    if posizione_l < 1:
-        posizione_l = 1
+    if posizione_l <= 0:
+        posizione_l = 0
+
+    elif posizione_l > 70:
+        posizione_l = 70
         
     return posizione_l
 
