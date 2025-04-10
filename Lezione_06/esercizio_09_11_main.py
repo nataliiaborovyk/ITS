@@ -15,5 +15,5 @@ user_1: User = User("Nataliia", "Borovyk", "nataliiaborovyk@gmail.com")
 priv_1:Privileges = Privileges(["puo modificare il contenuto", "puo condividre il contenuto"])
 adm_1:Admin = Admin(user_1, priv_1)
 
-user_1.describe_user()
-priv_1.show_privileges()
+adm_1.describe_user()
+adm_1.show_privileges()

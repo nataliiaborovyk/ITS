@@ -11,7 +11,7 @@ def vowelRemover(frase:str) -> str:
         return ""
     else:
         if frase[0].lower() in "aeiou":
-            return vowelRemover(frase[1:])
+            return "" + vowelRemover(frase[1:])
         else:
             return frase[0] + vowelRemover(frase[1:])
         

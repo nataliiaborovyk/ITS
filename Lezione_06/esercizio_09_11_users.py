@@ -28,3 +28,9 @@ class Admin:
     def __init__(self, user:User, privilege:Privileges):
         self.user = user
         self.privilege = privilege
+
+    def describe_user(self):
+        self.user.describe_user()
+
+    def show_privileges(self):
+        self.privilege.show_privileges()
