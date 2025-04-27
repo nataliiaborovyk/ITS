@@ -9,9 +9,9 @@ def validate_password(password:str):
     
     cont_1 = 0
     cont_2 = 0
-
+    
     for i in password:
-        if i == i.upper():
+        if i.isupper():
             cont_1 += 1
         if i in punctuation:
             cont_2 += 1
@@ -24,7 +24,7 @@ def validate_password(password:str):
         raise ValueError(f"Password \"{password}\" must have at least three uppercase letters")
     
     if cont_2 < 4:
-        raise Exception(f"Password \"{password}\" must have at least four special characters (non-alphanumeric)")
+        raise ValueError(f"Password \"{password}\" must have at least four special characters (non-alphanumeric)")
     
     return True
     

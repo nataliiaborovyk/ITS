@@ -18,7 +18,6 @@ class LotteryMachine:
         else:
             self.ticket = ticket
 
-
     def winningTicket(self):
         self.ticket = random.choices(self.lista, k=4)      #random.choices() permette di sceliere dalla lista quantita di caratteri richiesti con possibili ripetizioni
                                                            #random.sample() permette di sceliere dalla lista quantita di caratteri richiesti SENZA ripetizioni

@@ -10,7 +10,7 @@ import re
 
 def is_integer(s:str) -> bool:
     
-    match = re.fullmatch(r'-?\d{3}', s)
+    match = re.fullmatch(r'-?\d+', s)
     if match:
         print(True)
     else:
